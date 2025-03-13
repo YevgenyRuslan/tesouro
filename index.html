@@ -81,13 +81,6 @@
                 } else {
                     addMessage("Não há mais dicas disponíveis!");
                 }
-            } {
-                if (hintIndex < hints[3].length) {
-                    addMessage(`Dica: ${hints[3][hintIndex]}`);
-                    hintIndex++;
-                } else {
-                    addMessage("Não há mais dicas disponíveis!");
-                }
             } else if (stage === 3 && userText === "wonka") {
                 addMessage("Enquanto vocês estavam caminhando e tentando achar a árvore, eu deixei um presente no porta-malas do carro. Pegue-o e veja a palavra secreta nele.");
                 stage++;
