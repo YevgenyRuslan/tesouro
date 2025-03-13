@@ -47,8 +47,9 @@
         let stage = 0;
         let playerName = "";
         let hintIndex = 0;
+        let hintIndexGeladeira = 0;
         const hints = {
-            3: ["Eu coloquei em cima de algo que é branco.", "Ela deixa as coisas geladas."],
+            3: ["Eu coloquei em cima de algo que é branco.", "Ela deixa as coisas geladas.", "Fica na cozinha.", "Onde você guarda leite e alimentos frios?"],
             5: ["Tem 3 bancos e uma árvore.", "Tem tipo uma academia do lado.", "Eu deixei bem no pé da árvore.", "É um bilhete com a palavra secreta."]
         };
         
@@ -74,6 +75,13 @@
                 addMessage("Para passar para o próximo desafio, eu deixei uma pista escondida lá na Praça do Marçom em uma árvore.");
                 stage++;
             } else if (stage === 3 && userText === "dica") {
+                if (hintIndexGeladeira < hints[3].length) {
+                    addMessage(`Dica: ${hints[3][hintIndexGeladeira]}`);
+                    hintIndexGeladeira++;
+                } else {
+                    addMessage("Não há mais dicas disponíveis!");
+                }
+            } {
                 if (hintIndex < hints[3].length) {
                     addMessage(`Dica: ${hints[3][hintIndex]}`);
                     hintIndex++;
