@@ -65,13 +65,13 @@
 
             if (stage === 0) {
                 playerName = userText;
-                addMessage(`Bem-vindo, ${playerName}! Vamos começar. Encontre um bilhete escondido e digite a palavra nele. Se quiser uma dica, digita 'dica'`);
+                addMessage(`Bem-vindo, ${playerName}! Vamos começar. Encontre um bilhete escondido e digite a palavra nele. Se quiser uma dica é só digitar 'dica'.`);
                 stage++;
             } else if (stage === 1 && userText === "começo") {
                 addMessage("Ouvi dizer que você gosta de caminhar numa praça, qual o nome da praça?");
                 stage++;
             } else if (stage === 2 && userText === "praça do marçom") {
-                addMessage("Para passar para o próximo desafio, eu deixei uma pista escondida lá na Praça do Marçom em uma árvore. Se quiser alguma dica é só digitar 'dica'");
+                addMessage("Para passar para o próximo desafio, eu deixei uma pista escondida lá na Praça do Marçom em uma árvore.");
                 stage++;
             } else if (stage === 3 && userText === "dica") {
                 if (hintIndex < hints[3].length) {
